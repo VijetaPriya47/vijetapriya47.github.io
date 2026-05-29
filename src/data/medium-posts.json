@@ -1,5 +1,19 @@
 [
   {
+    "title": "I just saved 70,000 claude tokens with one Python tool.",
+    "link": "https://blog.cubed.run/i-just-saved-70-000-claude-tokens-with-one-python-tool-f4a7408fe650?source=rss-f07908d154a3------2",
+    "pubDate": "Fri, 29 May 2026 04:38:55 GMT",
+    "image": "https://cdn-images-1.medium.com/max/947/1*uw8znVCM42P_zTCxR6w8IQ.png",
+    "description": "When I first started using Claude, I used to upload pdfs, images and a lot of files for reference, for good prompts.",
+    "categories": [
+      "ai",
+      "claude",
+      "microsoft",
+      "llm",
+      "claude-code"
+    ]
+  },
+  {
     "title": "Building Your First Real Controller: Workers, Reconcile, and the Queue",
     "link": "https://blog.stackademic.com/building-your-first-real-controller-workers-reconcile-and-the-queue-73e09ba1bf42?source=rss-f07908d154a3------2",
     "pubDate": "Sat, 16 May 2026 18:59:36 GMT",
