@@ -1,96 +1,90 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Global design system — polished terminal/dev theme.
+ * Deep dark base, phosphor-green primary, amber secondary, monospace type.
  */
 
-/* Global Font Import - Fira Code */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
-/* You can override the default Infima variables here. */
-:root {
-  /* Override global font to Monospace */
-  --ifm-font-family-base: 'Fira Code', 'Roboto Mono', monospace;
-
-  /* Backend Engineer Color Palette overrides */
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-background-color: #f8f9fa;
-  --ifm-navbar-background-color: #ffffff;
-  --ifm-footer-background-color: #ffffff;
-  --site-bg-glow-1: rgba(26, 115, 232, 0.14);
-  --site-bg-glow-2: rgba(52, 168, 83, 0.12);
-  --site-bg-glow-3: rgba(251, 188, 5, 0.1);
-}
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+:root,
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-color-warning-contrast-background: #ebdac1;
-  --ifm-color-warning-contrast-foreground: #4c3200;
+  /* ---- Terminal palette ---- */
+  --term-bg: #0a0e14;
+  --term-panel: #0d131c;
+  --term-elevated: #111a26;
+  --term-border: #1c2735;
+  --term-border-bright: #2a3a4f;
+  --term-green: #3ee08f;
+  --term-green-dim: #2aa86b;
+  --term-green-glow: rgba(62, 224, 143, 0.14);
+  --term-amber: #ffb454;
+  --term-cyan: #56c8ff;
+  --term-red: #ff6b6b;
+  --term-text: #c8d3e0;
+  --term-muted: #74839a;
+  --term-faint: #4a5870;
 
-  /* Ensure backgrounds are deep black/dark for brutalist vibe */
-  --ifm-background-color: #0d1117;
-  --ifm-navbar-background-color: #161b22;
-  --ifm-footer-background-color: #161b22;
-  --site-bg-glow-1: rgba(88, 166, 255, 0.18);
-  --site-bg-glow-2: rgba(37, 194, 160, 0.14);
-  --site-bg-glow-3: rgba(121, 192, 255, 0.1);
+  /* ---- Infima overrides ---- */
+  --ifm-font-family-base: 'JetBrains Mono', 'Fira Code', ui-monospace, 'SF Mono', monospace;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  --ifm-color-primary: var(--term-green);
+  --ifm-color-primary-dark: #2bd381;
+  --ifm-color-primary-darker: #25c777;
+  --ifm-color-primary-darkest: #1ea562;
+  --ifm-color-primary-light: #55e49c;
+  --ifm-color-primary-lighter: #63e7a4;
+  --ifm-color-primary-lightest: #8deebb;
+  --ifm-code-font-size: 92%;
+  --ifm-background-color: var(--term-bg);
+  --ifm-background-surface-color: var(--term-panel);
+  --ifm-navbar-background-color: rgba(10, 14, 20, 0.88);
+  --ifm-footer-background-color: var(--term-panel);
+  --ifm-font-color-base: var(--term-text);
+  --ifm-heading-color: #e6edf6;
+  --ifm-color-content-secondary: var(--term-muted);
+  --ifm-toc-border-color: var(--term-border);
+  --ifm-hr-border-color: var(--term-border);
+  --ifm-table-border-color: var(--term-border);
+  --ifm-blockquote-border-left-color: var(--term-green-dim);
+  --ifm-link-color: var(--term-green);
+  --ifm-link-hover-color: var(--term-amber);
+  --ifm-navbar-link-color: var(--term-muted);
+  --ifm-navbar-link-hover-color: var(--term-green);
+  --ifm-menu-color: var(--term-muted);
+  --ifm-menu-color-active: var(--term-green);
+  --ifm-breadcrumb-color-active: var(--term-green);
+  --ifm-code-background: rgba(62, 224, 143, 0.08);
+  --docusaurus-highlighted-code-line-bg: rgba(62, 224, 143, 0.1);
+  --ifm-global-radius: 8px;
 }
 
-/* Force everything to monospace if not inherited */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-input,
-button,
-textarea {
-  font-family: 'Fira Code', 'Roboto Mono', monospace !important;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--ifm-background-color);
+  background-color: var(--term-bg);
   background-image:
-    radial-gradient(700px circle at 10% 12%, var(--site-bg-glow-1), transparent 62%),
-    radial-gradient(600px circle at 88% 20%, var(--site-bg-glow-2), transparent 64%),
-    radial-gradient(800px circle at 50% 100%, var(--site-bg-glow-3), transparent 70%);
+    radial-gradient(900px circle at 15% 0%, rgba(62, 224, 143, 0.05), transparent 60%),
+    radial-gradient(700px circle at 90% 15%, rgba(255, 180, 84, 0.04), transparent 60%),
+    radial-gradient(900px circle at 50% 110%, rgba(86, 200, 255, 0.04), transparent 65%);
   background-attachment: fixed;
 }
 
-.main-wrapper {
-  background: transparent !important;
-}
-
+/* Faint CRT scanlines over everything */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
-  opacity: 0.22;
-  background-image:
-    linear-gradient(rgba(26, 115, 232, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 115, 232, 0.06) 1px, transparent 1px);
-  background-size: 32px 32px;
+  z-index: 2;
+  opacity: 0.35;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.12) 0px,
+    rgba(0, 0, 0, 0.12) 1px,
+    transparent 1px,
+    transparent 3px
+  );
 }
 
 #__docusaurus {
@@ -98,98 +92,201 @@ body::before {
   z-index: 1;
 }
 
-[data-theme='dark'] body::before {
-  opacity: 0.12;
-  background-image:
-    linear-gradient(rgba(88, 166, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(88, 166, 255, 0.08) 1px, transparent 1px);
+.main-wrapper {
+  background: transparent !important;
 }
 
-/* Reduce navbar padding */
+::selection {
+  background: rgba(62, 224, 143, 0.28);
+  color: #eafff4;
+}
+
+/* Terminal-style scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--term-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--term-border-bright);
+  border-radius: 5px;
+  border: 2px solid var(--term-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--term-green-dim);
+}
+
+/* ---- Navbar: terminal titlebar ---- */
 .navbar {
-  padding: 0.5rem 1rem !important;
-  border-bottom: 1px solid #dadce0;
+  border-bottom: 1px solid var(--term-border);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1.25rem;
+  box-shadow: none;
 }
 
-.navbar__inner {
-  padding: 0 !important;
+.navbar__title {
+  color: var(--term-green);
+  font-weight: 600;
 }
 
-.navbar__brand {
-  padding: 0.25rem 0 !important;
-}
-
-.navbar__item {
-  padding: 0.25rem 0.5rem !important;
-}
-
-.navbar__link {
-  padding: 0.25rem 0.5rem !important;
-}
-
-.navbar__link {
-  padding: 0.25rem 0.5rem !important;
-}
-
-/* Navbar Logo Refinement */
-.navbar__logo {
-  margin-right: 10px;
+.navbar__title::before {
+  content: '~/';
+  color: var(--term-muted);
+  font-weight: 400;
 }
 
 .navbar__logo img {
-  height: 44px;
-  /* Default is often small, bumping to 44px */
-  width: 44px;
+  height: 34px;
+  width: 34px;
   object-fit: cover;
-  /* Ensure image doesn't stretch if not square */
   border-radius: 50%;
-  border: 2px solid var(--ifm-color-primary);
-  /* Add primary border for polish */
-  transition: transform 0.2s ease-in-out;
+  border: 1.5px solid var(--term-green-dim);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.navbar__logo img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px var(--ifm-color-primary);
+.navbar__brand:hover .navbar__logo img {
+  border-color: var(--term-green);
+  box-shadow: 0 0 12px var(--term-green-glow);
 }
 
-div[role="region"][aria-label="Skip to main content"],
+.navbar__link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.navbar__link--active {
+  color: var(--term-green);
+}
+
+.navbar__link--active::before {
+  content: '❯ ';
+  color: var(--term-green);
+}
+
+.navbar-sidebar {
+  background: var(--term-panel);
+}
+
+/* ---- Footer ---- */
+.footer {
+  border-top: 1px solid var(--term-border);
+  background: var(--term-panel);
+  padding: 3rem 0 2rem;
+}
+
+.footer__title {
+  color: var(--term-green);
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  letter-spacing: 0.08em;
+}
+
+.footer__title::before {
+  content: '# ';
+  color: var(--term-faint);
+}
+
+.footer__link-item {
+  color: var(--term-muted);
+  font-size: 0.85rem;
+  transition: color 0.15s ease;
+}
+
+.footer__link-item:hover {
+  color: var(--term-green);
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: var(--term-faint);
+  font-size: 0.78rem;
+  margin-top: 2rem;
+}
+
+/* ---- Docs / content polish ---- */
+article {
+  font-size: 0.95rem;
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--term-border) !important;
+  background: transparent;
+}
+
+.menu__link--active {
+  background: var(--term-green-glow);
+}
+
+.table-of-contents__link--active {
+  color: var(--term-green);
+}
+
+.pagination-nav__link {
+  border-color: var(--term-border);
+  background: var(--term-panel);
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--term-green-dim);
+}
+
+.breadcrumbs__link {
+  font-size: 0.8rem;
+}
+
+.theme-code-block {
+  border: 1px solid var(--term-border);
+  box-shadow: none !important;
+}
+
+div[role='region'][aria-label='Skip to main content'],
 .skipToContent_fXgn {
   display: none !important;
 }
 
-/* Mobile Sidebar Fixes */
-/* Mobile Sidebar Fixes removed to restore default Docusaurus behavior */
-/* 
-.navbar-sidebar { ... }
-*/
-
-/* Blog section on homepage */
+/* ---- Homepage blog section ---- */
 .home-blog-section {
   width: 100%;
-  margin: 2rem 0 4rem;
+  margin: 0 0 5rem;
 }
 
 .home-blog-content {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
-.home-blog-heading {
-  font-size: 1.5rem;
-  border-bottom: 2px solid #dadce0;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
-  color: var(--ifm-color-primary);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+/* Shared section heading: "❯ section --name" */
+.term-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #e6edf6;
+  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
 }
 
-[data-theme='dark'] .navbar {
-  border-bottom-color: #30363d;
+.term-heading::before {
+  content: '❯';
+  color: var(--term-green);
+  font-weight: 700;
 }
 
-[data-theme='dark'] .home-blog-heading {
-  border-bottom-color: #30363d;
+.term-heading .term-heading-flag {
+  color: var(--term-muted);
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.term-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--term-border), transparent);
+  align-self: center;
 }

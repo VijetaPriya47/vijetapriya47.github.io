@@ -15,7 +15,9 @@ export default function Home(): ReactNode {
         <PortfolioSections />
         <section id="blog" className="home-blog-section">
           <div className="home-blog-content">
-            <h2 className="home-blog-heading">:: BLOG / MEDIUM_POSTS</h2>
+            <h2 className="term-heading">
+              cat blog/<span className="term-heading-flag">--latest</span>
+            </h2>
             <MediumCards />
           </div>
         </section>

@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Vijeta Priya',
-  tagline: 'Software Engineer & Competitive Programmer',
+  tagline: 'Backend & Distributed Systems Engineer',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -50,7 +50,7 @@ const config: Config = {
         },
         blog: false,
         theme: {
-          customCss: ['./src/css/custom.css', './src/css/portfolio.css', './src/css/cses-docs.css', './src/css/animations.css', './src/css/dictionary.css', './src/css/flip-card.css'],
+          customCss: ['./src/css/custom.css', './src/css/cses-docs.css', './src/css/dictionary.css'],
         },
       } satisfies Preset.Options,
     ],
@@ -94,7 +94,7 @@ const config: Config = {
             },
             {
               label: 'Projects',
-              to: '/',
+              to: '/#projects',
             },
             {
               label: 'Dictionary',
@@ -132,11 +132,11 @@ const config: Config = {
           items: [
             {
               label: 'Blog',
-              to: '/',
+              to: '/#blog',
             },
             {
               label: 'Resume',
-              href: '#',
+              href: '/resume/VijetaPriya.pdf',
             },
           ],
         },
