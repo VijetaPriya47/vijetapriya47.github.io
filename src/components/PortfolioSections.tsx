@@ -146,19 +146,19 @@ const experience: ExperienceEntry[] = [
                 text: <>Designed a multi-layered architecture following Separation of Concerns for scalable AI prompt management, split into five focused layers.</>,
             },
             {
-                text: <><strong>Prompt Contract (Library)</strong> — source of truth storing immutable prompt specs, templates, and system messages as large JSONB.</>,
+                text: <><code>Prompt Contract (Library)</code> — source of truth storing immutable prompt specs, templates, and system messages as large JSONB.</>,
             },
             {
-                text: <><strong>Prompt Contract Grid (Topology)</strong> — maps UI modules/components to prompt IDs and generates strict VRN identifiers.</>,
+                text: <><code>Prompt Contract Grid (Topology)</code> — maps UI modules/components to prompt IDs and generates strict VRN identifiers.</>,
             },
             {
-                text: <><strong>Prompt Contract Grid Search (Discovery)</strong> — lightweight table with <code>pgvector</code> + <code>tsvector</code> for fast cosine similarity and full-text search without scanning large JSONB.</>,
+                text: <><code>Prompt Contract Grid Search (Discovery)</code> — lightweight table with <code>pgvector</code> + <code>tsvector</code> for fast cosine similarity and full-text search without scanning large JSONB.</>,
             },
             {
-                text: <><strong>Prompt Contract Ranking (Telemetry)</strong> — separate high-write table for tokens, retries, errors, and model metrics to avoid locking config data.</>,
+                text: <><code>Prompt Contract Ranking (Telemetry)</code> — separate high-write table for tokens, retries, errors, and model metrics to avoid locking config data.</>,
             },
             {
-                text: <><strong>Vapusfin PromptContract (Router)</strong> — maps actions to preferred prompt versions for safe rollouts and A/B testing.</>,
+                text: <><code>Vapusfin PromptContract (Router)</code> — maps actions to preferred prompt versions for safe rollouts and A/B testing.</>,
             },
             {
                 text: <>Supported two execution paths: a dynamic AI agent flow (user query → embedding search → grid lookup → library fetch) and a direct UI flow (button action → router lookup → library fetch).</>,
