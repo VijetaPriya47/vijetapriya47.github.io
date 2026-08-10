@@ -50,6 +50,131 @@ interface ExperienceEntry {
 
 const experience: ExperienceEntry[] = [
     {
+        logo: 'https://github.com/openeverest.png',
+        logoExternal: true,
+        date: 'Jun 2026 — Aug 2026',
+        role: 'LFX Mentee',
+        org: 'OpenEverest',
+        items: [
+            {
+                text: <>Extracted shared HTTP-poll classification logic into <code>pkg/cli/wait</code>.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2808', label: 'PR #2808' },
+            },
+            {
+                text: <>Added <code>everestctl backup-storage delete</code> command.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2765', label: 'PR #2765' },
+            },
+            {
+                text: <>Added <code>everestctl instance delete</code> command.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2762', label: 'PR #2762' },
+            },
+            {
+                text: <>Added <code>everestctl backup-storage create</code> subcommand.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2671', label: 'PR #2671' },
+            },
+            {
+                text: <>Added <code>everestctl restore create</code> subcommand.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2656', label: 'PR #2656' },
+            },
+            {
+                text: <>Built restore management commands and list functionality for <code>everestctl</code>.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2648', label: 'PR #2648' },
+            },
+            {
+                text: <>Added <code>everestctl backup create</code> subcommand.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2599', label: 'PR #2599' },
+            },
+            {
+                text: <>Added <code>--wait</code> flag to <code>everestctl instance create</code>.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2600', label: 'PR #2600' },
+            },
+            {
+                text: <>Implemented backup management commands and listing functionality for <code>everestctl</code>.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2597', label: 'PR #2597' },
+            },
+            {
+                text: <>Added <code>everestctl backup-storage list</code> subcommand.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2573', label: 'PR #2573' },
+            },
+            {
+                text: <>Added <code>everestctl backup-class list</code> subcommand.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2565', label: 'PR #2565' },
+            },
+            {
+                text: <>Added <code>everestctl instance list</code> subcommand.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2563', label: 'PR #2563' },
+            },
+            {
+                text: <>Added <code>everestctl provider list</code> subcommand.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2564', label: 'PR #2564' },
+            },
+            {
+                text: <>Added <code>--preset</code> flag to <code>everestctl instance create</code>.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2518', label: 'PR #2518' },
+            },
+            {
+                text: <>Added <code>--watch</code> / <code>-w</code> flag to <code>everestctl instance status</code>.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2519', label: 'PR #2519' },
+            },
+            {
+                text: <>Implemented <code>everestctl instance create</code>.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2480', label: 'PR #2480' },
+            },
+            {
+                text: <>Implemented <code>everestctl auth logout</code>.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2443', label: 'PR #2443' },
+            },
+            {
+                text: <>Added <code>everestctl auth login</code> for CLI authentication.</>,
+                link: { href: 'https://github.com/openeverest/openeverest/pull/2372', label: 'PR #2372' },
+            },
+            {
+                text: <>Worked on managing RBAC roles.</>,
+            },
+        ],
+    },
+    {
+        logo: '/img/vapusdata.jpeg',
+        date: 'Jun 2026 — Aug 2026',
+        role: 'Intern',
+        org: 'Vapusdata',
+        items: [
+            {
+                text: <>Architected and built an end-to-end enterprise Prompt Contract system using Protocol Buffers, gRPC, and Bun.</>,
+            },
+            {
+                text: <>Designed a multi-layered architecture following Separation of Concerns for scalable AI prompt management, split into five focused layers.</>,
+            },
+            {
+                text: <><strong>Prompt Contract (Library)</strong> — source of truth storing immutable prompt specs, templates, and system messages as large JSONB.</>,
+            },
+            {
+                text: <><strong>Prompt Contract Grid (Topology)</strong> — maps UI modules/components to prompt IDs and generates strict VRN identifiers.</>,
+            },
+            {
+                text: <><strong>Prompt Contract Grid Search (Discovery)</strong> — lightweight table with <code>pgvector</code> + <code>tsvector</code> for fast cosine similarity and full-text search without scanning large JSONB.</>,
+            },
+            {
+                text: <><strong>Prompt Contract Ranking (Telemetry)</strong> — separate high-write table for tokens, retries, errors, and model metrics to avoid locking config data.</>,
+            },
+            {
+                text: <><strong>Vapusfin PromptContract (Router)</strong> — maps actions to preferred prompt versions for safe rollouts and A/B testing.</>,
+            },
+            {
+                text: <>Supported two execution paths: a dynamic AI agent flow (user query → embedding search → grid lookup → library fetch) and a direct UI flow (button action → router lookup → library fetch).</>,
+            },
+            {
+                text: <>Enabled zero-downtime version rollbacks by updating version pointers instead of deleting prompts.</>,
+            },
+            {
+                text: <>Isolated heavy JSONB (TOAST) from vector/search indexes for faster queries and lower database load.</>,
+            },
+            {
+                text: <>Implemented a full feedback loop so ranking data could be used later for prompt performance evaluation.</>,
+            },
+        ],
+    },
+    {
         logo: 'https://github.com/kubernetes.png',
         logoExternal: true,
         date: 'Jan 2026 — present',
