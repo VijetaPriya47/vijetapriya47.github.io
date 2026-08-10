@@ -2,6 +2,9 @@ import React from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
 import styles from './PortfolioSections.module.css';
+import githubPRs from '../data/github-prs.json';
+
+const GITHUB_HANDLE = 'VijetaPriya47';
 
 const SectionHeading = ({ name, flag }: { name: string; flag?: string }) => (
     <h2 className="term-heading">
@@ -108,6 +111,10 @@ const experience: ExperienceEntry[] = [
                 text: <>Added group service account token data source, package dependency proxy resource (GraphQL), label priority support, and compliance requirement resource.</>,
                 link: { href: 'https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2805', label: 'MR !2805 +' },
             },
+            {
+                text: <>Added <code>gitlab_compliance_requirement</code> resource for managing Compliance Framework Requirements and Controls (Ultimate) via GraphQL.</>,
+                link: { href: 'https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/3178', label: 'MR !3178' },
+            },
         ],
     },
     {
@@ -184,16 +191,15 @@ const ExperienceSection = () => (
 
 /* ---------------- Merged contributions log ---------------- */
 
-const merged = [
-    { repo: 'kubernetes/kubernetes', desc: 'fix: goroutine leak in TestNodeSyncResync', link: 'https://github.com/kubernetes/kubernetes/pull/135217' },
-    { repo: 'kubernetes-sigs/cluster-api', desc: 'fix: remove finalizers when ownerRef never set', link: 'https://github.com/kubernetes-sigs/cluster-api/pull/13239' },
-    { repo: 'gitlab/terraform-provider', desc: 'refactor: shared RotatableToken interface', link: 'https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2894' },
-    { repo: 'gitlab/terraform-provider', desc: 'feat: gitlab_project_security_settings resource', link: 'https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2897' },
-    { repo: 'gitlab/terraform-provider', desc: 'fix(wiki_page): title drift for subpages and dashes', link: 'https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2896' },
-    { repo: 'gitlab/terraform-provider', desc: 'feat: priority field for project and group labels', link: 'https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2898' },
-    { repo: 'hyperledger-labs/fablo', desc: 'fix: handle missing post-generate.sh hook', link: 'https://github.com/hyperledger-labs/fablo/pull/521' },
-    { repo: 'volcano-sh/website', desc: 'docs: improvements to Volcano documentation', link: 'https://github.com/volcano-sh/website/pull/377' },
-];
+interface MergedPR {
+    repo: string;
+    number: number;
+    title: string;
+    link: string;
+    mergedAt: string;
+}
+
+const merged = githubPRs as MergedPR[];
 
 const MergedLogSection = () => (
     <section className={styles.section}>
@@ -203,15 +209,30 @@ const MergedLogSection = () => (
                 <span className={`${styles.dot} ${styles.dotRed}`} />
                 <span className={`${styles.dot} ${styles.dotAmber}`} />
                 <span className={`${styles.dot} ${styles.dotGreen}`} />
-                <span className={styles.logTitle}>merged.log — {merged.length} entries</span>
+                <span className={styles.logTitle}>
+                    merged.log — @{GITHUB_HANDLE} — {merged.length} entries
+                    <span className={styles.logCron}> (managed by a Cron Job)</span>
+                </span>
+            </div>
+            <div className={styles.logTableHead}>
+                <span className={styles.logIndex}>#</span>
+                <span className={styles.logRepo}>repo</span>
+                <span className={styles.logDesc}>title</span>
+                <span className={styles.logStatus}>merged</span>
             </div>
             <div className={styles.logBody}>
                 {merged.map((m, i) => (
-                    <a key={i} href={m.link} target="_blank" rel="noreferrer" className={styles.logRow}>
+                    <a key={m.link} href={m.link} target="_blank" rel="noreferrer" className={styles.logRow}>
                         <span className={styles.logIndex}>{String(i + 1).padStart(2, '0')}</span>
                         <span className={styles.logRepo}>{m.repo}</span>
-                        <span className={styles.logDesc}>{m.desc}</span>
-                        <span className={styles.logStatus}>merged ✓</span>
+                        <span className={styles.logDesc}>{m.title}</span>
+                        <span className={styles.logStatus}>
+                            {new Date(m.mergedAt).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'short',
+                                day: 'numeric',
+                            })}
+                        </span>
                     </a>
                 ))}
             </div>

@@ -1,0 +1,44 @@
+name: Sync GitHub Merged PRs
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # 8:30 AM IST (3:00 AM UTC)
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  sync-prs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run sync script
+        run: node scripts/sync-github-prs.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code src/data/github-prs.json || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add src/data/github-prs.json
+          git commit -m "chore: sync merged GitHub PRs"
+          git pull --rebase origin main
+          git push

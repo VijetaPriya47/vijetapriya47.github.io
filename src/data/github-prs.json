@@ -1,0 +1,233 @@
+[
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2808,
+    "title": "Extract shared HTTP-poll classification into pkg/cli/wait",
+    "link": "https://github.com/openeverest/openeverest/pull/2808",
+    "mergedAt": "2026-08-09T09:00:13Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2765,
+    "title": "Ctl everestctl backup storage delete",
+    "link": "https://github.com/openeverest/openeverest/pull/2765",
+    "mergedAt": "2026-08-06T07:04:14Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2762,
+    "title": "feat(instance): add instance delete command",
+    "link": "https://github.com/openeverest/openeverest/pull/2762",
+    "mergedAt": "2026-08-04T06:55:17Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2671,
+    "title": "everestctl: add backup-storage create subcommand",
+    "link": "https://github.com/openeverest/openeverest/pull/2671",
+    "mergedAt": "2026-08-03T09:05:02Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2656,
+    "title": "everestctl: add restore create subcommand",
+    "link": "https://github.com/openeverest/openeverest/pull/2656",
+    "mergedAt": "2026-07-30T07:07:50Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2648,
+    "title": "Add restore management commands and list functionality",
+    "link": "https://github.com/openeverest/openeverest/pull/2648",
+    "mergedAt": "2026-07-28T12:10:14Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2599,
+    "title": "everestctl: add backup create subcommand",
+    "link": "https://github.com/openeverest/openeverest/pull/2599",
+    "mergedAt": "2026-07-27T16:21:21Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2600,
+    "title": "Add --wait flag to instance create",
+    "link": "https://github.com/openeverest/openeverest/pull/2600",
+    "mergedAt": "2026-07-27T13:24:43Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2597,
+    "title": "Implement backup management commands and listing functionality",
+    "link": "https://github.com/openeverest/openeverest/pull/2597",
+    "mergedAt": "2026-07-23T10:11:27Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2573,
+    "title": "Add backup-storage list subcommand to everestctl",
+    "link": "https://github.com/openeverest/openeverest/pull/2573",
+    "mergedAt": "2026-07-18T08:14:10Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2565,
+    "title": "Ctl everestctl backup class list",
+    "link": "https://github.com/openeverest/openeverest/pull/2565",
+    "mergedAt": "2026-07-17T19:18:14Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2563,
+    "title": "everestctl: add instance list subcommand",
+    "link": "https://github.com/openeverest/openeverest/pull/2563",
+    "mergedAt": "2026-07-17T19:17:19Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2564,
+    "title": "Add provider list subcommand to Everestctl",
+    "link": "https://github.com/openeverest/openeverest/pull/2564",
+    "mergedAt": "2026-07-16T09:48:00Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2518,
+    "title": "everestctl: add --preset flag to instance create",
+    "link": "https://github.com/openeverest/openeverest/pull/2518",
+    "mergedAt": "2026-07-16T02:36:43Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2519,
+    "title": "everestctl instance status: add --watch/-w flag",
+    "link": "https://github.com/openeverest/openeverest/pull/2519",
+    "mergedAt": "2026-07-13T08:56:28Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2480,
+    "title": "instance: implement everestctl instance create",
+    "link": "https://github.com/openeverest/openeverest/pull/2480",
+    "mergedAt": "2026-07-01T15:21:52Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2443,
+    "title": "auth: implement everestctl auth logout",
+    "link": "https://github.com/openeverest/openeverest/pull/2443",
+    "mergedAt": "2026-06-25T09:56:25Z"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2372,
+    "title": "cli: add everestctl auth login",
+    "link": "https://github.com/openeverest/openeverest/pull/2372",
+    "mergedAt": "2026-06-23T16:54:43Z"
+  },
+  {
+    "repo": "VijetaPriya47/RideSync",
+    "number": 15,
+    "title": "Financial records",
+    "link": "https://github.com/VijetaPriya47/RideSync/pull/15",
+    "mergedAt": "2026-04-07T10:06:15Z"
+  },
+  {
+    "repo": "VijetaPriya47/RideSync",
+    "number": 5,
+    "title": "Carpooling safe",
+    "link": "https://github.com/VijetaPriya47/RideSync/pull/5",
+    "mergedAt": "2026-03-31T03:57:02Z"
+  },
+  {
+    "repo": "kubernetes-sigs/cluster-api-provider-aws",
+    "number": 5861,
+    "title": "🌱 fix(test): resolve flaky TestROSANetworkReconciler_Reconcile by using Eventually",
+    "link": "https://github.com/kubernetes-sigs/cluster-api-provider-aws/pull/5861",
+    "mergedAt": "2026-02-17T14:55:06Z"
+  },
+  {
+    "repo": "kubernetes-sigs/cluster-api",
+    "number": 13239,
+    "title": "🐛 CAPD: Remove finalizers during deletion if ownerRef was never set for cluster controllers",
+    "link": "https://github.com/kubernetes-sigs/cluster-api/pull/13239",
+    "mergedAt": "2026-02-04T17:58:30Z"
+  },
+  {
+    "repo": "kubernetes/kubernetes",
+    "number": 135217,
+    "title": "Fix goroutine leak in TestNodeSyncResync",
+    "link": "https://github.com/kubernetes/kubernetes/pull/135217",
+    "mergedAt": "2025-12-18T03:59:39Z"
+  },
+  {
+    "repo": "VijetaPriya47/RideSync",
+    "number": 1,
+    "title": "Init01",
+    "link": "https://github.com/VijetaPriya47/RideSync/pull/1",
+    "mergedAt": "2025-11-10T03:56:51Z"
+  },
+  {
+    "repo": "VijetaPriya47/vijetapriya47.github.io",
+    "number": 6,
+    "title": "Update 2136 E - By the Assignment.md",
+    "link": "https://github.com/VijetaPriya47/vijetapriya47.github.io/pull/6",
+    "mergedAt": "2025-09-18T00:27:37Z"
+  },
+  {
+    "repo": "VijetaPriya47/HelloUser",
+    "number": 1,
+    "title": "Generate comprehensive api documentation",
+    "link": "https://github.com/VijetaPriya47/HelloUser/pull/1",
+    "mergedAt": "2025-09-14T14:04:16Z"
+  },
+  {
+    "repo": "VijetaPriya47/vijetapriya47.github.io",
+    "number": 5,
+    "title": "Rename 2136 E By the Assignment.md to 2136 E - By the Assignment.md",
+    "link": "https://github.com/VijetaPriya47/vijetapriya47.github.io/pull/5",
+    "mergedAt": "2025-08-28T22:37:00Z"
+  },
+  {
+    "repo": "VijetaPriya47/vijetapriya47.github.io",
+    "number": 4,
+    "title": "Update 2136 E. By the Assignment",
+    "link": "https://github.com/VijetaPriya47/vijetapriya47.github.io/pull/4",
+    "mergedAt": "2025-08-28T20:54:12Z"
+  },
+  {
+    "repo": "VijetaPriya47/vijetapriya47.github.io",
+    "number": 2,
+    "title": "Delete docs/tutorial-extras directory",
+    "link": "https://github.com/VijetaPriya47/vijetapriya47.github.io/pull/2",
+    "mergedAt": "2025-08-26T13:34:38Z"
+  },
+  {
+    "repo": "VijetaPriya47/vijetapriya47.github.io",
+    "number": 1,
+    "title": "profile-pic",
+    "link": "https://github.com/VijetaPriya47/vijetapriya47.github.io/pull/1",
+    "mergedAt": "2025-08-26T12:48:44Z"
+  },
+  {
+    "repo": "volcano-sh/website",
+    "number": 377,
+    "title": "fix: improve language switching in single blog pages",
+    "link": "https://github.com/volcano-sh/website/pull/377",
+    "mergedAt": "2025-05-14T11:33:43Z"
+  },
+  {
+    "repo": "VijetaPriya47/Portfolio_static",
+    "number": 1,
+    "title": "Add GitHub and Live Demo buttons to project cards",
+    "link": "https://github.com/VijetaPriya47/Portfolio_static/pull/1",
+    "mergedAt": "2025-04-17T14:57:42Z"
+  },
+  {
+    "repo": "hyperledger-labs/fablo",
+    "number": 521,
+    "title": "Fix #519: Check if post-generate.sh exists before executing",
+    "link": "https://github.com/hyperledger-labs/fablo/pull/521",
+    "mergedAt": "2025-04-13T19:18:30Z"
+  }
+]
