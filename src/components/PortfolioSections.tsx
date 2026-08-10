@@ -2,9 +2,10 @@ import React from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
 import styles from './PortfolioSections.module.css';
-import githubPRs from '../data/github-prs.json';
+import mergedPRs from '../data/merged-prs.json';
 
 const GITHUB_HANDLE = 'VijetaPriya47';
+const GITLAB_HANDLE = 'vijeta004';
 
 const SectionHeading = ({ name, flag }: { name: string; flag?: string }) => (
     <h2 className="term-heading">
@@ -197,9 +198,10 @@ interface MergedPR {
     title: string;
     link: string;
     mergedAt: string;
+    source: 'github' | 'gitlab';
 }
 
-const merged = githubPRs as MergedPR[];
+const merged = mergedPRs as MergedPR[];
 
 const MergedLogSection = () => (
     <section className={styles.section}>
@@ -210,7 +212,7 @@ const MergedLogSection = () => (
                 <span className={`${styles.dot} ${styles.dotAmber}`} />
                 <span className={`${styles.dot} ${styles.dotGreen}`} />
                 <span className={styles.logTitle}>
-                    merged.log — @{GITHUB_HANDLE} — {merged.length} entries
+                    merged.log — @{GITHUB_HANDLE} / @{GITLAB_HANDLE} — {merged.length} entries
                     <span className={styles.logCron}> (managed by a Cron Job)</span>
                 </span>
             </div>
@@ -224,7 +226,12 @@ const MergedLogSection = () => (
                 {merged.map((m, i) => (
                     <a key={m.link} href={m.link} target="_blank" rel="noreferrer" className={styles.logRow}>
                         <span className={styles.logIndex}>{String(i + 1).padStart(2, '0')}</span>
-                        <span className={styles.logRepo}>{m.repo}</span>
+                        <span className={styles.logRepo}>
+                            <span className={`${styles.logSource} ${m.source === 'gitlab' ? styles.logSourceGitlab : styles.logSourceGithub}`}>
+                                {m.source === 'gitlab' ? 'gl' : 'gh'}
+                            </span>
+                            {m.repo}
+                        </span>
                         <span className={styles.logDesc}>{m.title}</span>
                         <span className={styles.logStatus}>
                             {new Date(m.mergedAt).toLocaleDateString('en-US', {

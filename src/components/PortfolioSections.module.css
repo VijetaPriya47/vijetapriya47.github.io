@@ -248,6 +248,26 @@
     white-space: nowrap;
 }
 
+.logSource {
+    display: inline-block;
+    margin-right: 0.4rem;
+    padding: 0.05rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.62rem;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
+}
+
+.logSourceGithub {
+    color: var(--term-text);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.logSourceGitlab {
+    color: #fc6d26;
+    background: rgba(252, 109, 38, 0.12);
+}
+
 .logDesc {
     color: var(--term-muted);
     font-size: 0.8rem;
