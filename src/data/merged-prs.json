@@ -1,6 +1,22 @@
 [
   {
     "repo": "openeverest/openeverest",
+    "number": 2863,
+    "title": "Refactor delete response handling and add backup delete command",
+    "link": "https://github.com/openeverest/openeverest/pull/2863",
+    "mergedAt": "2026-08-12T13:23:46Z",
+    "source": "github"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 2847,
+    "title": "feat: add restore delete command with confirmation and wait options",
+    "link": "https://github.com/openeverest/openeverest/pull/2847",
+    "mergedAt": "2026-08-12T13:08:31Z",
+    "source": "github"
+  },
+  {
+    "repo": "openeverest/openeverest",
     "number": 2808,
     "title": "Extract shared HTTP-poll classification into pkg/cli/wait",
     "link": "https://github.com/openeverest/openeverest/pull/2808",
