@@ -1,6 +1,14 @@
 [
   {
     "repo": "openeverest/openeverest",
+    "number": 3055,
+    "title": "feat(api): add PATCH support to the Instance API",
+    "link": "https://github.com/openeverest/openeverest/pull/3055",
+    "mergedAt": "2026-08-31T15:17:42Z",
+    "source": "github"
+  },
+  {
+    "repo": "openeverest/openeverest",
     "number": 2992,
     "title": "fix: update command argument handling to accept no arguments and show help",
     "link": "https://github.com/openeverest/openeverest/pull/2992",
