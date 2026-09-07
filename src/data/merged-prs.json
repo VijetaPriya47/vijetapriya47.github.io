@@ -1,6 +1,22 @@
 [
   {
     "repo": "openeverest/openeverest",
+    "number": 3112,
+    "title": "feat(api): make the backup storage PATCH a real JSON Merge Patch",
+    "link": "https://github.com/openeverest/openeverest/pull/3112",
+    "mergedAt": "2026-09-06T17:52:04Z",
+    "source": "github"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 3132,
+    "title": "fix(cli): error out on invalid subcommands of parent commands",
+    "link": "https://github.com/openeverest/openeverest/pull/3132",
+    "mergedAt": "2026-09-06T07:39:31Z",
+    "source": "github"
+  },
+  {
+    "repo": "openeverest/openeverest",
     "number": 3055,
     "title": "feat(api): add PATCH support to the Instance API",
     "link": "https://github.com/openeverest/openeverest/pull/3055",
