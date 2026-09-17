@@ -1,6 +1,22 @@
 [
   {
     "repo": "openeverest/openeverest",
+    "number": 3139,
+    "title": "feat(api): add update command for backup storage management",
+    "link": "https://github.com/openeverest/openeverest/pull/3139",
+    "mergedAt": "2026-09-16T09:30:54Z",
+    "source": "github"
+  },
+  {
+    "repo": "openeverest/openeverest",
+    "number": 3135,
+    "title": "feat: add everestctl instance update",
+    "link": "https://github.com/openeverest/openeverest/pull/3135",
+    "mergedAt": "2026-09-16T08:57:05Z",
+    "source": "github"
+  },
+  {
+    "repo": "openeverest/openeverest",
     "number": 3112,
     "title": "feat(api): make the backup storage PATCH a real JSON Merge Patch",
     "link": "https://github.com/openeverest/openeverest/pull/3112",
